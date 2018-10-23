@@ -38,6 +38,8 @@ def main():
             print(' -> Desloca o arquivo da staging area para o repositorio local.')
             p.print(msg="\tgit log", color="GREEN", saltarlinha='pao')
             print(' -> Lista todos os commit já realizados de forma decrescente.')
+            p.print(msg="\tgit reset", color="GREEN", saltarlinha='pao')
+            print(' -> Reseta as modificações da stage area.')
 
         elif comando == "exit":
             break
@@ -129,10 +131,20 @@ def main():
                 p.print(msg="Fracasso !", color="RED", saltarlinha='sim')
 
         elif comando.split()[0] + comando.split()[1] == "gitlog":
+            p.print(msg="\t\t\t***Logs***", color="YELLOW", saltarlinha='2x')
+            p.print(msg="|Nome\t|Mudança\t|Data\t|Horário\t|Conteudo", color="RED", saltarlinha='1x')
             matriz_logs = inter.log()
-            for i in range(len(matriz_logs)):
-                for k in range(len(matriz_logs[i])):
-                    print(matriz_logs[i][k])
+            if not matriz_logs:
+                p.print(msg="\t\tNenhum log encontrado!", color="GREEN", saltarlinha='1x')
+            else:
+                for i in range(len(matriz_logs)):
+                    for k in range(len(matriz_logs[i])):
+                        print(matriz_logs[i][k], end='\t')
+                    print('\n')
+        elif comando.split()[0] + comando.split()[1] == "gitreset":
+            inter.reset()
+            p.print(msg="Reset!", color="GREEN", saltarlinha='1x')
+
         else:
             print("Digite um comando válido!!")
 

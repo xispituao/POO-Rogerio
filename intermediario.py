@@ -89,6 +89,8 @@ class Intermediario:
             else:
                 return False
 
+    def reset(self):
+        self.diretorio.reset()
 
     def getarquivos(self):
         return self.diretorio.getarquivos()

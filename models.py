@@ -54,13 +54,19 @@ class Arquivo:
     def getstatus(self):
         return self.status
 
+    def setstatu(self):
+        self.status[1] = "notstaged"
+
+    def setstatu2(self):
+        self.status[1] = "notstaged"
+        self.status[0] = "untracked"
 
 class Commit:
     def __init__(self, nome, status, comentario, dia, mes, ano, hora, minutos, segundos):
         self.nome = nome
         self.status =status
         self.data = str(dia) + "/" + str(mes) + "/" + str(ano)
-        self.horario = str(hora) + "/" + str(minutos) + "/" + str(segundos)
+        self.horario = str(hora) + ":" + str(minutos) + ":" + str(segundos)
         self.comentario = comentario
 
     def getnome(self):
@@ -156,4 +162,13 @@ class Diretorio:
             matriz[i][3] = self.commmits[i].gethorario()
             matriz[i][4] = self.commmits[i].getcomentario()
         return matriz
+
+    def reset(self):
+        staged_files = list(filter(lambda arquivo:arquivo.getstatus()[1] == "staged", self.arquivos))
+        for file in staged_files:
+            if file.getstatus()[2] != "new":
+                file.setstatu()
+            else:
+                file.setstatu2()
+        return True
 
