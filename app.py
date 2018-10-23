@@ -128,7 +128,6 @@ def main():
             else:
                 p.print(msg="Fracasso !", color="RED", saltarlinha='sim')
 
-
         else:
             print("Digite um comando válido!!")
 

@@ -58,7 +58,7 @@ class Intermediario:
         else:
             untracked_files = list(filter(lambda arquivo: arquivo.getstatus()[0] == "untracked", self.diretorio.getarquivos()))
             nostaged_files = list(filter(lambda arquivo:arquivo.getstatus()[0] == "tracked" and arquivo.getstatus()[1] == "notstaged", self.diretorio.getarquivos()))
-            be_commit_files = list(filter(lambda arquivo: arquivo.getstatus()[1] == "staged", self.diretorio.getarquivos()))
+            be_commit_files = list(filter(lambda arquivo: arquivo.getstatus()[1] == "staged" and arquivo.getstatus()[4] is False, self.diretorio.getarquivos()))
             return untracked_files, nostaged_files, be_commit_files
 
     def add(self, nome):

@@ -10,9 +10,11 @@ class Arquivo:
             a = Arquivo(nome, conteudo_novo)
             a.status[0], a.status[2], a.status[3] = "tracked", "modified", self.getnome()
             return a
-        elif self.status[0] == "tracked" and self.status[4] is True:
+        elif self.status[0] == "untracked":
             self.conteudo = conteudo_novo
-            self.status[2] = "modified"
+        #else:
+         #   self.conteudo = conteudo_novo
+          #  self.status[2] = "modified"
 
     def apagar(self):
         if self.status[0] == "untracked":
