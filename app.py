@@ -128,6 +128,11 @@ def main():
             else:
                 p.print(msg="Fracasso !", color="RED", saltarlinha='sim')
 
+        elif comando.split()[0] + comando.split()[1] == "gitlog":
+            matriz_logs = inter.log()
+            for i in range(len(matriz_logs)):
+                for k in range(len(matriz_logs[i])):
+                    print(matriz_logs[i][k])
         else:
             print("Digite um comando válido!!")
 

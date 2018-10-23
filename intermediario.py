@@ -79,5 +79,16 @@ class Intermediario:
             else:
                 return False
 
+    def log(self):
+        if self.diretorio is None:
+            return "dir"
+        else:
+            logs = self.diretorio.log()
+            if logs:
+                return logs
+            else:
+                return False
+
+
     def getarquivos(self):
         return self.diretorio.getarquivos()

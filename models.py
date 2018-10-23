@@ -63,14 +63,20 @@ class Commit:
         self.horario = str(hora) + "/" + str(minutos) + "/" + str(segundos)
         self.comentario = comentario
 
+    def getnome(self):
+        return self.nome
+
+    def getstatus(self):
+        return self.status
+
     def getdata(self):
         return self.data
 
-    def gehora(self):
-        return self.hora
+    def gethorario(self):
+        return self.horario
 
-    def gethash(self):
-        return self.hash
+    def getcomentario(self):
+        return self.comentario
 
 
 class Diretorio:
@@ -138,3 +144,16 @@ class Diretorio:
                     return True
 
         return False
+
+    def log(self):
+        matriz = [None] * len(self.commmits)
+        for i in range(len(self.commmits)):
+            matriz[i] = [0] * 5
+        for i in range(len(self.commmits)):
+            matriz[i][0] = self.commmits[i].getnome()
+            matriz[i][1] = self.commmits[i].getstatus()
+            matriz[i][2] = self.commmits[i].getdata()
+            matriz[i][3] = self.commmits[i].gethorario()
+            matriz[i][4] = self.commmits[i].getcomentario()
+        return matriz
+
