@@ -49,7 +49,6 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:layout_marginTop="25dp"
-        android:text="DADOS"
         android:visibility="invisible"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/Butao" />
@@ -80,6 +79,13 @@
             android:textAlignment="center"
             android:textSize="20sp"
             android:visibility="invisible" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
 
     </LinearLayout>
 

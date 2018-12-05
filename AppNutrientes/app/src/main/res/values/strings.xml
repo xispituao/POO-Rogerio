@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AppNutrientes</string>
+    <string-array name="planets_array">
+        <item>Sedentário</item>
+        <item>Levemente ativo</item>
+        <item>Moderadamente ativo</item>
+        <item>Muito ativo</item>
+    </string-array>
 </resources>
