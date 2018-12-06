@@ -26,9 +26,12 @@ public class NecessidadeDetalhadasActivity extends AppCompatActivity {
         gorduras = (TextView) findViewById(R.id.gorduras);
 
         viewnome.setText(String.format("Calorias detalhadas de %s", nome));
-        proteinas.setText(String.format("Proteínas %.2f calorias", caloriasTotais * 0.15));
-        carboidratos.setText(String.format("Carboidratos %.2f calorias", caloriasTotais * 0.60));
-        gorduras.setText(String.format("Gorduras %.2f calorias", caloriasTotais * 0.25));
+        Double caloriasProteinas = caloriasTotais * 0.15;
+        proteinas.setText(String.format("Proteínas %.2f calorias(%.2f gramas)", caloriasProteinas, caloriasProteinas / 4));
+        Double caloriasCarboidratos = caloriasTotais * 0.60;
+        carboidratos.setText(String.format("Carboidratos %.2f calorias(%.2f gramas)", caloriasCarboidratos, caloriasCarboidratos / 4));
+        Double caloriasGorduras = caloriasTotais * 0.25;
+        gorduras.setText(String.format("Gorduras %.2f calorias(%.2f gramas)", caloriasGorduras, caloriasGorduras / 9));
     }
 
     public void voltar(View view) {
