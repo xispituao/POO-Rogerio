@@ -24,7 +24,7 @@ public class DadosActivity extends AppCompatActivity {
         TextView nomeDados = findViewById(R.id.Nome);
         editAltura = findViewById(R.id.Altura);
         editPeso = findViewById(R.id.Peso);
-        nomeDados.setText(nome + "\nDigite os dados a seguir");
+        nomeDados.setText(nome);
     }
 
     public void finalizar(View view) {

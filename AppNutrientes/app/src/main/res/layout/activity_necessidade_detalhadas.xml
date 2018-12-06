@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NecessidadeDetalhadasActivity">
+
+    <TextView
+        android:id="@+id/Nome"
+        android:textSize="27sp"
+        android:textColor="@android:color/holo_red_light"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/proteina"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Nome"/>
+
+    <TextView
+        android:id="@+id/carboidratos"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/proteina"/>
+
+    <TextView
+        android:id="@+id/gorduras"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/carboidratos"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Voltar"
+        android:onClick="voltar"
+        app:layout_constraintTop_toBottomOf="@+id/gorduras"/>
+
+</android.support.constraint.ConstraintLayout>

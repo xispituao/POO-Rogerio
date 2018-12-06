@@ -50,6 +50,7 @@
         android:textAlignment="center"
         android:layout_marginTop="25dp"
         android:visibility="invisible"
+        android:textColor="@android:color/holo_red_light"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/Butao" />
 
@@ -80,14 +81,65 @@
             android:textSize="20sp"
             android:visibility="invisible" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-        </Spinner>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/estilo_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estilo de vida"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/estilo_texto">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/necessidade_texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Necessidade calórica"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_green_light"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"/>
+
+    <TextView
+        android:id="@+id/necessidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/necessidade_texto"/>
+
+    <Button
+        android:id="@+id/ButaoDetalhes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="nes_cal_det"
+        android:text="Necessidade calórica detalhadamente"
+        android:visibility="invisible"
+        android:textColor="@android:color/holo_orange_dark"
+        app:layout_constraintTop_toBottomOf="@+id/necessidade"/>
 
 
 </android.support.constraint.ConstraintLayout>

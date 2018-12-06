@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DadosActivity" android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".DadosActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".NecessidadeDetalhadasActivity"></activity>
     </application>
 
 </manifest>
